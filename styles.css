@@ -111,7 +111,8 @@ body {
   gap: 72px;
   z-index: 2;
 }
-.main {
+.main,
+.main-grid {
   height: 100%;
   grid-area: main;
   width: 1fr;
@@ -119,12 +120,23 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: max-content;
   grid-auto-rows: max-content;
-  padding: 32px;
-  background-color: var(--neutral-color1);
+
+  background-color: #e8e8f6;
   gap: 16px;
 }
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
 .main-sidebar {
   grid-area: main-sidebar;
+  background-color: #e8e8f6;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
 }
 
 /* Children */
@@ -222,4 +234,43 @@ body {
 .user-actions {
   display: flex;
   gap: 8px;
+}
+
+.sidebar-top,
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.announcement {
+  background-color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 16px;
+}
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: #111031;
+}
+
+.tag {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.tag .profile {
+  height: 30px;
+  width: 30px;
+}
+
+.trending {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 8px 16px;
 }
